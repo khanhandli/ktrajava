@@ -1,0 +1,11 @@
+package De01;
+
+public class LoiNhapDiem extends SinhVien{
+	public void loiNhapDiem() throws Exception {
+		if (getDiemTB() < 0 && getDiemTB() > 10) {
+			throw new Exception("Diem khong hop le!!"); 
+		}else {
+			System.out.println("Diem da Hop Le!");
+		}
+	}
+}

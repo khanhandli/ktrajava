@@ -1,0 +1,25 @@
+package De01;
+
+import java.util.Scanner;
+
+public class Main1 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int tongSV;
+		System.out.println("Nhap Tong so sinh vien: ");
+		tongSV = Integer.parseInt(input.nextLine());
+		
+		LoiNhapDiem[] taomang = new LoiNhapDiem[tongSV];
+		
+		for (int i = 0; i < tongSV; i++) {
+			taomang[i] = new LoiNhapDiem();
+			System.out.println("Nhap Thong tin sinh vien " + (i+1) + " :");
+			taomang[i].input();
+		}
+		for (int i = 0; i < taomang.length; i++) {
+			System.out.println("Thong tin sinh vien " + (i+1) + " :");
+			taomang[i].output();
+		}
+	
+	}
+}

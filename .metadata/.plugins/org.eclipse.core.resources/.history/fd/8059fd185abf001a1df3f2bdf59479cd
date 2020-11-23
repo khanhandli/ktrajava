@@ -1,0 +1,39 @@
+package De01;
+
+import java.util.Scanner;
+
+public class Main1 {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		int tongSV;
+		System.out.println("Nhap Tong so sinh vien: ");
+		tongSV = Integer.parseInt(input.nextLine());
+		
+		LoiNhapDiem[] taomang = new LoiNhapDiem[tongSV];
+		
+		for (int i = 0; i < tongSV; i++) {
+			taomang[i] = new LoiNhapDiem();
+			System.out.println("Nhap Thong tin sinh vien " + (i+1) + " :");
+			taomang[i].input();
+		}
+		for (int i = 0; i < taomang.length; i++) {
+			System.out.println("Thong tin sinh vien " + (i+1) + " :");
+			taomang[i].output();
+		}
+		
+		String loptimkiem;
+		System.out.println("Nhap ten lop can tim: ");
+		loptimkiem = input.nextLine();
+		int check = 0;
+		for (int i = 0; i < taomang.length; i++) {
+			if (taomang[i].getLop().equalsIgnoreCase(loptimkiem)) {
+				System.out.print("Ho Ten: " + taomang[i].getHoTen()+"           ");
+				System.out.print("Diem" + taomang[i].getDiemTB() + "\n");
+				check++;
+			}
+		if(check == 0 ) {
+			System.out.println("Khong co lop can tim!!!!");
+		}
+		}
+	}
+}

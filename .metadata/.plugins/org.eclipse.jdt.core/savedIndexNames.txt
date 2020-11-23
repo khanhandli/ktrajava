@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+G:\ThiJAVA\.metadata\.plugins\org.eclipse.jdt.core
+1033180045.index
+4013106623.index

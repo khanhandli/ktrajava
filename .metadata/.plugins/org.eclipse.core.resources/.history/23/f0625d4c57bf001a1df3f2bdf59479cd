@@ -1,0 +1,5 @@
+package De01;
+
+public class LoiNhapDiem extends SinhVien{
+
+}
